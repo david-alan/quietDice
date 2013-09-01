@@ -70,6 +70,7 @@ $('#reset_dice').click(function(){
     $('.die').html('[unrolled]');
     $('.die').fadeTo(200,0.5);
     $('input[type=text]').val('');
+    $('input[type=checkbox]:checked').removeAttr('checked');
 });
 
 $(document).ready(function(){
