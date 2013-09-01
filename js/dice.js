@@ -20,7 +20,7 @@ defend_die[5] = 'focus';
 defend_die[6] = '[blank]';
 defend_die[7] = '[blank]';
 
-
+$(function(){
 
 $('.die').click(function(){
     
@@ -75,4 +75,5 @@ $('#reset_dice').click(function(){
 $(document).ready(function(){
     $('.die').html('[unrolled]');
     $('.die').fadeTo(200,0.5);    
+});
 });
