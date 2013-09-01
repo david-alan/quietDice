@@ -51,7 +51,7 @@
                   <div class="text_box" id="text_box_8"><input type="text"></div>
                </div>
                <div class="row-fluid">
-                  <a href="#" class="btn btn-primary btn-large" id="reset_dice"><i class="icon-white icon-refresh"></i>  Reset Dice</a>
+                  <a href="#" class="btn btn-primary btn-large" id="reset_dice"><i class="icon-white icon-refresh"></i> Reset Dice</a>
                </div>
             </div>
          </div>

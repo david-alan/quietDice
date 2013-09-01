@@ -73,7 +73,7 @@ $('#reset_dice').click(function(){
     $('input[type=text]').val('');
     $('input[type=checkbox]:checked').removeAttr('checked');
     
-    //reset the value after clearing it (b/c we cleared all text boxes)
+    //reset the value after clearing it
     $('#number_of_dice').val(die_qty);
 });
 
