@@ -75,3 +75,11 @@ div{
 	padding: 2px;
 }
 */
+.reset_row{
+	padding-top: 20px;
+}
+
+html, body, .container, .first_row, .left_col{
+	background-color: #ccc;
+	min-height: 100%;
+}

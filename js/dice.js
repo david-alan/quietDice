@@ -105,6 +105,4 @@ $('#number_of_dice').change(function(){
     $('.die').fadeTo(200,0.5);    
 });
 
-
-
 });
