@@ -69,9 +69,8 @@ color: rgba(255,255,255,1);
 input[type="text"]{
         width: 65px;
 }
-/*
+
 div{
 	border: 2px red solid;
 	padding: 2px;
 }
-*/
