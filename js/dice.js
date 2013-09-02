@@ -88,17 +88,17 @@ $('#number_of_dice').change(function(){
 
 	//delete all existing dice
 	$('.die').remove();
-	$('.die_check_box').remove();
-	$('.die_txt_modifier').remove();
+	$('.die_check_box_div').remove();
+	$('.die_txt_modifier_div').remove();
 
 	//create enough dice
 	for(var i=1;i<=adjusted_qty_of_dice;i++){
-		$('.offense_txt_modifier').append('<div class="text_box die_txt_modifier" id="text_box_'+ i + '"><input type="text"></div>');
+		$('.offense_txt_modifier').append('<div class="text_box die_txt_modifier_div"><input type="text" id="text_box_'+ i + '" class="die_txt_modifier"></div>');
 		$('.offense_dice').append('<div class="die offense" id="die_'+ i +'"></div>');
-		$('.offense_checkbox').append('<div class="check_box die_check_box" id="check_box_'+ i+'"><input type="checkbox"></div>');
-		$('.defense_txt_modifier').append('<div class="text_box die_txt_modifier" id="text_box_'+ (i + adjusted_qty_of_dice) + '"><input type="text"></div>');
+		$('.offense_checkbox').append('<div class="check_box die_check_box_div"><input type="checkbox" id="check_box_'+ i+'"></div>');
+		$('.defense_txt_modifier').append('<div class="text_box die_txt_modifier_div"><input type="text" id="text_box_'+ (i+adjusted_qty_of_dice) + '" class="die_txt_modifier"></div>');
 		$('.defense_dice').append('<div class="die defense" id="die_'+ (i + adjusted_qty_of_dice) +'"></div>');
-		$('.defense_checkbox').append('<div class="check_box die_check_box" id="check_box_'+ (i + adjusted_qty_of_dice) +'"><input type="checkbox"></div>');
+		$('.defense_checkbox').append('<div class="check_box die_check_box_div"><input type="checkbox" id="check_box_'+ (i + adjusted_qty_of_dice) +'"></div>');
 	}
     $('.die').html('[unrolled]');
     $('.die').fadeTo(200,0.5);    
@@ -110,16 +110,10 @@ $('#number_of_dice').change(function(){
 
 });
 
-/*
 $(function(){
-	$('#text_box_4').change(function(){
-		var x = $(this).val();
-		var y = $('#number_of_dice').val();
-console.log('y is: ' + y);
-console.debug('this: ' + this);
-		console.log(x);
-		modifier_id = this.id;
-		console.log('modified the field: ' + modifier_id);
+	$('.die_txt_modifier').change(function(){
+		var v = $(this).val();
+		var dice_id = this.id.substr(9); //get the id of the dice from the string (text_box_4 returns 4)
+		$('#die_' + dice_id).html(v);
+	});
 });
-});
-*/
