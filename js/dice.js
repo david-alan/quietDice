@@ -82,10 +82,9 @@ $(document).ready(function(){
     $('.die').fadeTo(200,0.5);    
 });
 
+
 $('#number_of_dice').change(function(){
-	//var qty_of_dice = $('#number_of_dice').size();
 	var adjusted_qty_of_dice = $('#number_of_dice').val();
-	var current_qty_of_dice = $('.die').size();
 
 	//delete all existing dice
 	$('.die').remove();
@@ -105,4 +104,22 @@ $('#number_of_dice').change(function(){
     $('.die').fadeTo(200,0.5);    
 });
 
+
+
+//$('.die_txt_modifier').change(function(){
+
 });
+
+/*
+$(function(){
+	$('#text_box_4').change(function(){
+		var x = $(this).val();
+		var y = $('#number_of_dice').val();
+console.log('y is: ' + y);
+console.debug('this: ' + this);
+		console.log(x);
+		modifier_id = this.id;
+		console.log('modified the field: ' + modifier_id);
+});
+});
+*/
