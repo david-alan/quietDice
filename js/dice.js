@@ -21,8 +21,17 @@ defend_die[7] = '[blank]';
 
 $(function(){
 $(document).on('click','.die',function(){
-//$('.die').click(function(){
-    
+     //if the corresponding checkbox is checked, prevent changing the die
+	var die_id = this.id.substr(4);
+	var checkbox_id = 'check_box_' + die_id;
+
+	if($('#' + checkbox_id).prop('checked')){ //disable those dice who have the checked boxes
+		return;
+	} else { //check the box to disable re-rolling unintentionally
+		$('#' + checkbox_id).prop('checked',true);
+	}
+
+ 
     //console.log(this);
     $(this).html('');
     if($(this).hasClass('defense')){
